@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>assets/red-sports-car-png-1.png</file>
+    </qresource>
+</RCC>

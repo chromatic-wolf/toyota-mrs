@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/car.png</file>
+        <file>assets/engine.max</file>
+        <file>assets/Engine_4_Cycle_-_Straight_4.3dm</file>
+        <file>assets/engine.obj</file>
+    </qresource>
+</RCC>
