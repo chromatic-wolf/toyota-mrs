@@ -36,43 +36,7 @@ Window{
         color: "#c2c2c2"
 
 
-        View3D {
-            id: view
-            anchors.fill: parent
-            environment: SceneEnvironment {
-              clearColor: "#112220"
-              backgroundMode: SceneEnvironment.Color
-            }
-            Node {
-              id: scene
-              PerspectiveCamera {
-                id: camera
-                z: 300
-              }
-              DirectionalLight {
-                z: 400
-                brightness: 100
-              }
-              Model {
-                source: "qrc:///assets/engine.obj"
-                materials: DefaultMaterial {
-                  diffuseColor: "green"
-                }
-                PropertyAnimation on eulerRotation.x {
-                  loops: Animation.Infinite
-                  duration: 5000
-                  to: 360
-                  from: 0
-                }
-                PropertyAnimation on eulerRotation.y {
-                  loops: Animation.Infinite
-                  duration: 5000
-                  to: 360
-                  from: 0
-                }
-              }
-            }
-          }
+
 
 
 
