@@ -8,5 +8,6 @@ private:
     void setup();
 
 public:
+    ~IndicatorMain();
     void start();
 };
