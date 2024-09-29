@@ -1,10 +1,12 @@
+#include "common/CanBus/CanBusController.h"
+
 class IndicatorMain
 {
-    private:
+private:
+    CanBusController *_canController;
     void loop();
     void setup();
 
 public:
     void start();
-    
 };
