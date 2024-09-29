@@ -1,0 +1,5 @@
+class Led
+{
+private:
+public:
+};
