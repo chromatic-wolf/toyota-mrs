@@ -6,7 +6,7 @@
 class CanBusController
 {
 private:
-    struct can_frame *_canMsg;
+    CanData *_canData;
     MCP2515 *_mcp2515; // change this to the CS pin of whatever board you have
     u_int *_can_controller_id;
 
