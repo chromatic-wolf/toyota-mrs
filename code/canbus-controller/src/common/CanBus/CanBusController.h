@@ -2,6 +2,7 @@
 #include <SPI.h> //Library for using SPI Communication
 #include <mcp2515.h>
 #include "common/CapMoistureSensor.h"
+#include "CanData.h"
 
 class CanBusController
 {
@@ -15,21 +16,6 @@ public:
 
     ~CanBusController();
     MCP2515::ERROR sendMessage(unsigned char canID, unsigned char frameSize = 8, unsigned char data[8]);
-    MCP2515::ERROR readMessage();
+    CanData readMessage();
 };
 
-class CanData
-{
-private:
-    struct can_frame *_canFrame;
-
-public:
-    CanData();
-    ~CanData();
-    MCP2515::ERROR errorStatus;
-    can_frame getData();
-    void setData(can_frame canFrame);
-
-    MCP2515::ERROR getErrorStatus;
-    void setErrorStatus(MCP2515::ERROR errorStatus);
-};

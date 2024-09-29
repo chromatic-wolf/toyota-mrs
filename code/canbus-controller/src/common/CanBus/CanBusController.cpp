@@ -24,7 +24,7 @@ CanBusController::CanBusController(u_int can_id, u_int CS_PIN, CAN_SPEED can_spe
 
 CanBusController::~CanBusController()
 {
-    delete _canData;;
+    delete _canData;
     delete _mcp2515; // change this to the CS pin of whatever board you have
     delete _can_controller_id;
 }
@@ -44,4 +44,12 @@ MCP2515::ERROR CanBusController::sendMessage(unsigned char canID, unsigned char 
     Serial.println("Sending message: ");
 
     return _mcp2515->sendMessage(_canData->canFrame);
+}
+
+CanData CanBusController::readMessage()
+{
+
+    _canData->setErrorStatus(_mcp2515->readMessage(_canData->canFrame));
+
+    return *_canData;
 }
