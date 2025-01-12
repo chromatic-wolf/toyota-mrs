@@ -1,0 +1,27 @@
+{
+	"BUILD_DIR" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/appsimpleqml3d_autogen",
+	"CMAKE_BINARY_DIR" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d",
+	"CMAKE_SOURCE_DIR" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d",
+	"INCLUDE_DIR" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/appsimpleqml3d_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/caleb/Downloads/simpleqml3d/simpleqml3d/main.qml",
+		"/home/caleb/Downloads/simpleqml3d/simpleqml3d/ThreeDimensionalScene.qml",
+		"/home/caleb/Downloads/simpleqml3d/simpleqml3d/RenderableEntity.qml",
+		"/home/caleb/Downloads/simpleqml3d/simpleqml3d/man.obj",
+		"/home/caleb/Downloads/simpleqml3d/simpleqml3d/IronMan.qml",
+		"/home/caleb/Downloads/simpleqml3d/simpleqml3d/man.png"
+	],
+	"LOCK_FILE" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/CMakeFiles/appsimpleqml3d_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/local/Qt-6.7.2/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/CMakeFiles/appsimpleqml3d_autogen.dir/AutoRcc_qml_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/caleb/Downloads/simpleqml3d/simpleqml3d/qml.qrc",
+	"VERBOSITY" : 0
+}

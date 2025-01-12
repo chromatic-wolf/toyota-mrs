@@ -1,0 +1,5 @@
+module Dashboard2
+typeinfo appDashboard2.qmltypes
+prefer :/qt/qml/Dashboard2/
+Main 1.0 Main.qml
+

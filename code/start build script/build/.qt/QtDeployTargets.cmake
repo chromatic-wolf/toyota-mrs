@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appDashboard2_FILE /home/caleb/Dashboard/build/appDashboard2)
+set(__QT_DEPLOY_TARGET_appDashboard2_TYPE EXECUTABLE)

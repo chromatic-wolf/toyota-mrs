@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="/qt/qml/simpleqml3d/">
+    <file alias="Main.qml">/home/caleb/Downloads/simpleqml3d/simpleqml3d/Main.qml</file>
+    <file alias="ThreeDimensionalScene.qml">/home/caleb/Downloads/simpleqml3d/simpleqml3d/ThreeDimensionalScene.qml</file>
+    <file alias="RenderableEntity.qml">/home/caleb/Downloads/simpleqml3d/simpleqml3d/RenderableEntity.qml</file>
+    <file alias="IronMan.qml">/home/caleb/Downloads/simpleqml3d/simpleqml3d/IronMan.qml</file>
+    <file alias="qml.qrc">/home/caleb/Downloads/simpleqml3d/simpleqml3d/qml.qrc</file>
+  </qresource>
+</RCC>
+

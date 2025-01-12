@@ -1,0 +1,8 @@
+module simpleqml3d
+typeinfo appsimpleqml3d.qmltypes
+prefer :/qt/qml/simpleqml3d/
+Main 1.0 Main.qml
+ThreeDimensionalScene 1.0 ThreeDimensionalScene.qml
+RenderableEntity 1.0 RenderableEntity.qml
+IronMan 1.0 IronMan.qml
+

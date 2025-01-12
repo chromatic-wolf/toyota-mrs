@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/simpleqml3d">
+    <file alias="qmldir">/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/simpleqml3d/qmldir</file>
+  </qresource>
+</RCC>
+

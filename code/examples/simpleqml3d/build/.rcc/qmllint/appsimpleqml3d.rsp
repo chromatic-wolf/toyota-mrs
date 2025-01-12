@@ -1,0 +1,13 @@
+--bare
+-I
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/build
+-I
+/usr/local/Qt-6.7.2/./qml
+--resource
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/.qt/rcc/qmake_simpleqml3d.qrc
+--resource
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/build/.qt/rcc/appsimpleqml3d_raw_qml_0.qrc
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/Main.qml
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/ThreeDimensionalScene.qml
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/RenderableEntity.qml
+/home/caleb/Downloads/simpleqml3d/simpleqml3d/IronMan.qml

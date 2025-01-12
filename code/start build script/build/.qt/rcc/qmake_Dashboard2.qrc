@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Dashboard2">
+    <file alias="qmldir">/home/caleb/Dashboard/build/Dashboard2/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appsimpleqml3d_FILE /home/caleb/Downloads/simpleqml3d/simpleqml3d/build/appsimpleqml3d)
+set(__QT_DEPLOY_TARGET_appsimpleqml3d_TYPE EXECUTABLE)

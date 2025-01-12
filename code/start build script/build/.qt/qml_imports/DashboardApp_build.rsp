@@ -1,0 +1,11 @@
+-rootPath
+/home/caleb/Dashboard/Dashboard
+-cmake-output
+-output-file
+/home/caleb/Dashboard/build/.qt/qml_imports/DashboardApp_build.cmake
+-importPath
+/home/caleb/Dashboard/build/qml
+-importPath
+/usr/local/Qt-6.7.2/./qml
+-qrcFiles
+/home/caleb/Dashboard/build/.qt/rcc/configuration.qrc

@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/caleb/Dashboard/build/appDashboard2_autogen",
+	"CMAKE_BINARY_DIR" : "/home/caleb/Dashboard/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/caleb/Dashboard/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/caleb/Dashboard/Dashboard2",
+	"CMAKE_SOURCE_DIR" : "/home/caleb/Dashboard/Dashboard2",
+	"INCLUDE_DIR" : "/home/caleb/Dashboard/build/appDashboard2_autogen/include",
+	"INPUTS" : [ "/home/caleb/Dashboard/Dashboard2/assets/car.png" ],
+	"LOCK_FILE" : "/home/caleb/Dashboard/build/CMakeFiles/appDashboard2_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/local/Qt-6.7.2/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/caleb/Dashboard/build/CMakeFiles/appDashboard2_autogen.dir/AutoRcc_qml_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/caleb/Dashboard/Dashboard2/qml.qrc",
+	"VERBOSITY" : 0
+}

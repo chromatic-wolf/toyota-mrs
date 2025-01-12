@@ -1,0 +1,10 @@
+-I
+/home/caleb/Dashboard/build
+-I
+/usr/local/Qt-6.7.2/./qml
+--resource
+/home/caleb/Dashboard/build/.qt/rcc/qmake_Dashboard2.qrc
+--resource
+/home/caleb/Dashboard/build/.qt/rcc/appDashboard2_raw_qml_0.qrc
+--module
+Dashboard2

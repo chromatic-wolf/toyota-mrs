@@ -1,0 +1,5 @@
+--resource
+/home/caleb/Dashboard/build/.qt/rcc/qmake_Dashboard2.qrc
+--resource
+/home/caleb/Dashboard/build/.qt/rcc/appDashboard2_raw_qml_0.qrc
+/qt/qml/Dashboard2/Main.qml
