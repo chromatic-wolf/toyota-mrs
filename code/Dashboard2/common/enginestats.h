@@ -17,7 +17,7 @@ public:
     double power_Calculator(double torqueNm, double RPM);
 
     //calculates torque in Nm based of the volumetric efficiency model and mass airflow. (will expand this model later to take into account coolant temp and other factors)
-    double calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTemp, double rpm);
+    double calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTempCelsius, double rpm);
 
     //calculates the brake specific fuel consumption
     double BSFC_Calculator(double powerKw, double fuelConsumptionGramsPerSecond);
@@ -27,6 +27,9 @@ public:
 
     //converts a megapascal to bar pressure
     double megaPascalToBar(double megaPascal);
+
+    //converts dedgrees to kelvin
+    double degreesToKelvin(double degrees);
 
 
 private:

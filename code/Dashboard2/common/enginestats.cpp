@@ -18,13 +18,13 @@ double EngineStats::power_Calculator(double torqueNm, double RPM)
     return torqueNm* rpmToRadPerSec(RPM);
 }
 
-double EngineStats::calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTemp, double rpm)
+double EngineStats::calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTempCelsius, double rpm)
 {
     // Convert MAF from grams/second to kilograms/second
     double massAirFlowKg = massAirFlow / 1000.0;
 
     // Calculate torque
-    double torque = (volumetricEfficiency * massAirFlowKg * GAS_CONSTANT * intakeTemp) / (2 * M_PI * rpm);
+    double torque = (volumetricEfficiency * massAirFlowKg * GAS_CONSTANT * degreesToKelvin(intakeTempCelsius)) / (2 * M_PI * rpm);
 
     return torque;
 }
@@ -44,3 +44,10 @@ double EngineStats::megaPascalToBar(double megaPascal)
 {
     return megaPascal*10;
 }
+
+double EngineStats::degreesToKelvin(double degrees)
+{
+    return degrees + 273.15;
+}
+
+
