@@ -16,7 +16,7 @@ public:
     //Returns power in KW
     double power_Calculator(double torqueNm, double RPM);
 
-    //calculates torque based of the volumetric efficiency model and mass airflow. (will expand this model later to take into account coolant temp and other factors)
+    //calculates torque in Nm based of the volumetric efficiency model and mass airflow. (will expand this model later to take into account coolant temp and other factors)
     double calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTemp, double rpm);
 
     //calculates the brake specific fuel consumption
