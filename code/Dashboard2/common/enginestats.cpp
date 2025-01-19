@@ -9,13 +9,24 @@ double EngineStats::BMEP_Calculator(int revolutionPerPowerStroke, double torqueN
 }
 
 double EngineStats::rpmToRadPerSec(double rpm)
-    {
+{
     return rpm *0.10472;
-    }
+}
 
 double EngineStats::power_Calculator(double torqueNm, double RPM)
 {
     return torqueNm* rpmToRadPerSec(RPM);
+}
+
+double EngineStats::calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTemp, double rpm)
+{
+    // Convert MAF from grams/second to kilograms/second
+    double massAirFlowKg = massAirFlow / 1000.0;
+
+    // Calculate torque
+    double torque = (volumetricEfficiency * massAirFlowKg * GAS_CONSTANT * intakeTemp) / (2 * M_PI * rpm);
+
+    return torque;
 }
 
 double EngineStats::BSFC_Calculator(double powerKw, double fuelConsumptionGramsPerSecond)
