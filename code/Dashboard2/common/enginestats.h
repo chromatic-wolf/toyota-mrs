@@ -5,7 +5,7 @@ class EngineStats
 {
 public:
 
-    const double GAS_CONSTANT = 287.0;
+    const double GAS_CONSTANT = 287.05;
 
     //calculates Brake Mean Effective Pressure in BAR
     double BMEP_Calculator(int revolutionPerPowerStroke = 2, double torqueNm = 0, double displacementCC = 0);
@@ -18,6 +18,9 @@ public:
 
     //calculates torque in Nm based of the volumetric efficiency model and mass airflow. (will expand this model later to take into account coolant temp and other factors)
     double calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTempCelsius, double rpm);
+
+    //calculates the mass airflow going into the engine based off of the MAP model
+    double calculateMAF(double absolutePressure, double airTemperature, double engineDisplacement, double volumetricEfficiency, double rpm);
 
     //calculates the brake specific fuel consumption
     double BSFC_Calculator(double powerKw, double fuelConsumptionGramsPerSecond);

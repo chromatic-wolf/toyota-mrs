@@ -29,6 +29,20 @@ double EngineStats::calculateTorque(double volumetricEfficiency, double massAirF
     return torque;
 }
 
+double EngineStats::calculateMAF(double absolutePressure, double airTemperature, double engineDisplacementCC, double volumetricEfficiency, double rpm)
+{
+    // Convert temperature from Celsius to Kelvin
+    double temperatureK = degreesToKelvin(airTemperature);
+
+    // Convert engine displacement from liters to cubic meters
+    double displacementM3 = engineDisplacementCC / 1'000'000.0;
+
+    // Calculate mass air flow (kg/s)
+    double maf = (volumetricEfficiency * absolutePressure * displacementM3 * rpm / 2.0) / (GAS_CONSTANT * temperatureK);
+
+    return maf;
+}
+
 double EngineStats::BSFC_Calculator(double powerKw, double fuelConsumptionGramsPerSecond)
 {
     //Fuel consumption in grams per second / power in watts
