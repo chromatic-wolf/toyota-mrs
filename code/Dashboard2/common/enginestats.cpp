@@ -2,6 +2,7 @@
 #include <math.h>
 
 //retures BMEP in BAR
+//(2 x pi x revolutions per power stroke (2) x torque (nm) ) / displacement = BMEP in mega pascals
 double EngineStats::BMEP_Calculator(int revolutionPerPowerStroke, double torqueNm, double displacementCC)
 {
     return ((2* M_PI * revolutionPerPowerStroke * torqueNm)/displacementCC)*10;
