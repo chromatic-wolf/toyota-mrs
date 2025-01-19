@@ -18,6 +18,8 @@ public:
     //calculates the brake specific fuel consumption
     double BSFC_Calculator(double powerKw, double fuelConsumptionGramsPerSecond);
 
+    //Calculates the pressure ratio as a value
+    double pressureRatio_Calculator(double pre_turbine_pressure, double post_turbine_pressure);
 
 
 private:

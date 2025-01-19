@@ -22,3 +22,8 @@ double EngineStats::BSFC_Calculator(double powerKw, double fuelConsumptionGramsP
     //Fuel consumption in grams per second / power in watts
     return fuelConsumptionGramsPerSecond/ (powerKw/1000);
 }
+
+double EngineStats::pressureRatio_Calculator(double pre_turbine_pressure, double post_turbine_pressure)
+{
+    return pre_turbine_pressure / post_turbine_pressure;
+}
