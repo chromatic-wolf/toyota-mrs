@@ -21,6 +21,9 @@ public:
     //Calculates the pressure ratio as a value
     double pressureRatio_Calculator(double pre_turbine_pressure, double post_turbine_pressure);
 
+    //converts a megapascal to bar pressure
+    double megaPascalToBar(double megaPascal);
+
 
 private:
 

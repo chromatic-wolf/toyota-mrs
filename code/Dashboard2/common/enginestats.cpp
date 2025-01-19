@@ -5,7 +5,7 @@
 //(2 x pi x revolutions per power stroke (2) x torque (nm) ) / displacement = BMEP in mega pascals
 double EngineStats::BMEP_Calculator(int revolutionPerPowerStroke, double torqueNm, double displacementCC)
 {
-    return ((2* M_PI * revolutionPerPowerStroke * torqueNm)/displacementCC)*10;
+    return (megaPascalToBar((2* M_PI * revolutionPerPowerStroke * torqueNm)/displacementCC));
 }
 
 double EngineStats::rpmToRadPerSec(double rpm)
@@ -27,4 +27,9 @@ double EngineStats::BSFC_Calculator(double powerKw, double fuelConsumptionGramsP
 double EngineStats::pressureRatio_Calculator(double pre_turbine_pressure, double post_turbine_pressure)
 {
     return pre_turbine_pressure / post_turbine_pressure;
+}
+
+double EngineStats::megaPascalToBar(double megaPascal)
+{
+    return megaPascal*10;
 }
