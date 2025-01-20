@@ -3,6 +3,7 @@
 #include <QObject>
 #include <QQuickView>
 #include <QTimer>
+#include <QString>
 
 #include "myclass.h"
 #include "fakeengine.h"
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
             &myEngine, SLOT(tickEngine()));
 
 
-    timer->start(1000);
+    timer->start(50);
 
 
     MyClass myClass(engine);
@@ -42,7 +43,8 @@ int main(int argc, char *argv[])
     QObject::connect(engine.rootObjects().at(0)->findChild<QObject*>("shutdownBtn"), SIGNAL(exitPressed()),
                      &myClass, SLOT(exitPressed()));
 
-    QObject::connect(&myEngine, SIGNAL(getRpm(QString rpm)), &myClass, SLOT(rpmUpdateSlot));
+    QObject::connect(&myEngine, SIGNAL(getRpm(QString)), &myClass, SLOT(rpmUpdateSlot(QString)));
+    QObject::connect(&myEngine, SIGNAL(getPressure(QString)), &myClass, SLOT(pressureUpdateSlot(QString)));
 
 
     return app.exec();

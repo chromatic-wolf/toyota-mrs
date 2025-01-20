@@ -52,6 +52,6 @@ void MyClass::rpmUpdateSlot(QString text)
 
 void MyClass::pressureUpdateSlot(QString text)
 {
-    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("pressureText");
+    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("pressureTxt");
     item->setProperty("text", text);
 }
