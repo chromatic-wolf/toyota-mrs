@@ -3,3 +3,8 @@
 testClass::testClass(QObject *parent)
     : QObject{parent}
 {}
+
+void testClass::testSlot()
+{
+
+}

@@ -1,6 +1,6 @@
-#include <QObject>
 #ifndef FAKEENGINE_H
 #define FAKEENGINE_H
+#include <QObject>
 
 class fakeEngine : public QObject
 {
@@ -44,7 +44,7 @@ public:
 
     double getCurrentVE(double rpm, double pressureBar);
 
-    fakeEngine();
+
 
 
 public slots:

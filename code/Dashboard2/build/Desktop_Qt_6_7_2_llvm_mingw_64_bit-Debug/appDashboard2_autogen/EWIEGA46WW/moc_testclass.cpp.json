@@ -4,6 +4,20 @@
             "className": "testClass",
             "object": true,
             "qualifiedClassName": "testClass",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "testSignal",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "testSlot",
+                    "returnType": "void"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

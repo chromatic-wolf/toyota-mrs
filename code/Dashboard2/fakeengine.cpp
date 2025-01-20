@@ -77,9 +77,6 @@ double fakeEngine::getCurrentVE(double rpm, double pressureBar)
     int currentPosPressure = find_closest(pressureMapBar, pressureBar);
     return veTable[currentPosPressure][currentPosRpm];
 }
-fakeEngine::fakeEngine() {
-
-}
 
 //This function will tick the engine over so every time it is called some random "algorithm" will move the core engine values (rpm and load probably) in order to test the GUI systems ect.
 //Load is based on RPM and manifold pressure so makes sense to move these values and everything else should be derived from those.
@@ -92,7 +89,7 @@ void fakeEngine::tickEngine()
         currentRPM = 500;
         enigneStarted = true;
     }
-    std::cout << "Moving engine RPM up" << std::endl;
+    std::cout << "Moving engine RPM and load" << std::endl;
     //figure out if rpm is at max or min values to determin if it can rais or lower or can do both
     if(currentRPM <= 500)
     {
@@ -110,5 +107,7 @@ void fakeEngine::tickEngine()
             currentRPM = currentRPM - 50;
         }
     }
+    std::cout << "Engine RPM: " << currentRPM << std::endl;
+    std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
 
 }

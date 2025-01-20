@@ -1758,8 +1758,7 @@ C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/myclass.h
  mdp:C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include/vadefs.h
  mdp:C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug/appDashboard2_autogen/moc_predefs.h
  mdp:C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/myclass.h
-C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/fakeengine.cpp
-C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/common/enginestats.cpp
+C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/main.cpp
 C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/QObject
@@ -2616,6 +2615,7 @@ C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.h
  mdp:C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include/vadefs.h
  mdp:C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug/appDashboard2_autogen/moc_predefs.h
  mdp:C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.h
-C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/main.cpp
+C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/fakeengine.cpp
+C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/common/enginestats.cpp
 C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/myclass.cpp
 C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.cpp

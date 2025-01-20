@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QObject>
 #include <QQuickView>
+#include <QTimer>
 
 #include "myclass.h"
 #include "fakeengine.h"
@@ -19,10 +20,15 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.loadFromModule("Dashboard2", "Main");
 
-    fakeEngine myEngine();
+    fakeEngine myEngine;
 
-    QTimer *timer = new QTimer(myEngine);
-    connect(timer, SIGNAL(timeout()), myEngine, SLOT(fakeEngine::tickEngine()));
+
+    QTimer *timer = new QTimer();
+
+    QObject::connect(timer, SIGNAL(timeout()),
+            &myEngine, SLOT(tickEngine()));
+
+
     timer->start(1000);
 
 

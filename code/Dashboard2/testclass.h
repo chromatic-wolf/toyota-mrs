@@ -9,7 +9,10 @@ class testClass : public QObject
 public:
     explicit testClass(QObject *parent = nullptr);
 
+public slots:
+    void testSlot();
 signals:
+    void testSignal();
 };
 
 #endif // TESTCLASS_H
