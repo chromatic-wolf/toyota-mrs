@@ -2,6 +2,30 @@
     {
         "classes": [
             {
+                "className": "fakeEngine",
+                "object": true,
+                "qualifiedClassName": "fakeEngine",
+                "slots": [
+                    {
+                        "access": "public",
+                        "name": "tickEngine",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "fakeengine.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
                 "className": "MyClass",
                 "object": true,
                 "qualifiedClassName": "MyClass",
@@ -37,6 +61,23 @@
             }
         ],
         "inputFile": "myclass.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "testClass",
+                "object": true,
+                "qualifiedClassName": "testClass",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "testclass.h",
         "outputRevision": 68
     }
 ]

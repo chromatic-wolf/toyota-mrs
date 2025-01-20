@@ -1,5 +1,6 @@
 #include "fakeengine.h"
 #include <random>
+#include <iostream>
 
 
 fakeEngine::fakeEngine(QObject *parent)
@@ -27,9 +28,9 @@ double veTable[15][20]=
 };
 
 
-double rpmMap[20] = {0,500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,1000};
+std::vector<double> rpmMap = {0.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0,5500.0,6000.0,6500.0,7000.0,7500.0,8000.0,8500.0,9000.0,1000.0};
 
-double pressureMapBar[15] = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25};
+std::vector<double> pressureMapBar = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25};
 
 bool enigneStarted = false;
 
@@ -85,11 +86,11 @@ fakeEngine::fakeEngine() {
 void fakeEngine::tickEngine()
 {
     //if engine is just started aka first tick then set load and rpm to lowest value.
-    if (engineStarted == false)
+    if (enigneStarted == false)
     {
         currentManifoldPressure = 0.15;
         currentRPM = 500;
-        engineStarted = true;
+        enigneStarted = true;
     }
     std::cout << "Moving engine RPM up" << std::endl;
     //figure out if rpm is at max or min values to determin if it can rais or lower or can do both

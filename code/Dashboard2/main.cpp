@@ -19,10 +19,10 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.loadFromModule("Dashboard2", "Main");
 
-    fakeEngine engine();
+    fakeEngine myEngine();
 
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), engine, SLOT(fakeEngine::tickEngine()));
+    QTimer *timer = new QTimer(myEngine);
+    connect(timer, SIGNAL(timeout()), myEngine, SLOT(fakeEngine::tickEngine()));
     timer->start(1000);
 
 

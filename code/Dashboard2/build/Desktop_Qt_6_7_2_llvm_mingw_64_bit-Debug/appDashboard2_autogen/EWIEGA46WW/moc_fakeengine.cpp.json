@@ -1,0 +1,24 @@
+{
+    "classes": [
+        {
+            "className": "fakeEngine",
+            "object": true,
+            "qualifiedClassName": "fakeEngine",
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "tickEngine",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "fakeengine.h",
+    "outputRevision": 68
+}
