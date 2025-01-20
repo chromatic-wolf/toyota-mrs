@@ -85,6 +85,7 @@ void fakeEngine::tickEngine()
     //if engine is just started aka first tick then set load and rpm to lowest value.
     if (enigneStarted == false)
     {
+        std::cout << "Engine just started" << std::endl;
         currentManifoldPressure = 0.15;
         currentRPM = 500;
         enigneStarted = true;
@@ -107,6 +108,25 @@ void fakeEngine::tickEngine()
             currentRPM = currentRPM - 50;
         }
     }
+
+    if(currentManifoldPressure <= 0.15)
+    {
+        currentManifoldPressure = currentManifoldPressure + 0.15;
+    }else if(currentManifoldPressure >= 2.25)
+    {
+        currentManifoldPressure = currentManifoldPressure - 0.15;
+    }else
+    {
+        if(generateRandomValue() == 1)
+        {
+            currentManifoldPressure = currentManifoldPressure + 0.15;
+        }else
+        {
+            currentManifoldPressure = currentManifoldPressure - 0.15;
+        }
+    }
+
+
     std::cout << "Engine RPM: " << currentRPM << std::endl;
     std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
 
