@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3301dae74a8fdf929689.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Dashboard2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-9d73bf9ff87d25f652c8.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-ac3480bcdf00c1b85b36.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-2199aa420c97e6d6ac1e.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-a52973d143f02372b412.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2-Debug-34117b3f483cdd203618.json",
+					"name" : "appDashboard2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_autogen-Debug-469fec391ceda6387070.json",
+					"name" : "appDashboard2_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_autogen_timestamp_deps-Debug-b3ca268c654751696e8a.json",
+					"name" : "appDashboard2_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_qmlimportscan-Debug-5ddd983fbd088cfd3f9f.json",
+					"name" : "appDashboard2_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_qmllint-Debug-76815ce25794e1110614.json",
+					"name" : "appDashboard2_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_qmllint_json-Debug-e3a33ade5b4d59545a03.json",
+					"name" : "appDashboard2_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_qmllint_module-Debug-1e35de324ae288f54050.json",
+					"name" : "appDashboard2_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_qmltyperegistration-Debug-7fc0a15fba76780e4cb7.json",
+					"name" : "appDashboard2_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDashboard2_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDashboard2_tooling-Debug-65e02a1ae79df9f51008.json",
+					"name" : "appDashboard2_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug",
+		"source" : "C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

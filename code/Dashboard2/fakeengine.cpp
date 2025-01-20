@@ -1,4 +1,11 @@
 #include "fakeengine.h"
+#include <random>
+
+
+fakeEngine::fakeEngine(QObject *parent)
+    : QObject{parent}
+{}
+
 
 double veTable[15][20]=
     {
@@ -29,8 +36,22 @@ bool enigneStarted = false;
 double currentManifoldPressure;
 double currentRPM;
 
+std::random_device rd;
 
-int find_closest(const vector<double>& A, const double a)
+
+double generateRandomValue() {
+    // Create a random number generator with a random seed
+    std::mt19937 gen(rd());
+
+    // Define a uniform distribution in the range [0.0, 1.0)
+    std::uniform_real_distribution<> dis(0.0, 1.0);
+
+    // Generate and return a random value between 0 and 1
+    return dis(gen);
+}
+
+
+int find_closest(const std::vector<double>& A, const double a)
 {
     if(A.size() <=0)
         throw std::invalid_argument("empty array");
@@ -65,11 +86,28 @@ void fakeEngine::tickEngine()
 {
     //if engine is just started aka first tick then set load and rpm to lowest value.
     if (engineStarted == false)
-        {
+    {
         currentManifoldPressure = 0.15;
         currentRPM = 500;
         engineStarted = true;
-        }
+    }
     std::cout << "Moving engine RPM up" << std::endl;
+    //figure out if rpm is at max or min values to determin if it can rais or lower or can do both
+    if(currentRPM <= 500)
+    {
+        currentRPM = currentRPM + 50;
+    }else if(currentRPM >= 10000)
+    {
+        currentRPM = currentRPM - 50;
+    }else
+    {
+        if(generateRandomValue() == 1)
+        {
+            currentRPM = currentRPM + 50;
+        }else
+        {
+            currentRPM = currentRPM - 50;
+        }
+    }
 
 }

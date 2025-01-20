@@ -1,10 +1,13 @@
+#include <QObject>
 #ifndef FAKEENGINE_H
 #define FAKEENGINE_H
 
-class fakeEngine
+class fakeEngine : public QObject
 {
+    Q_OBJECT
 public:
     //this class will represent a fake engine that generates somewhat realistic values to be used to debug the dashboard UI and other systems.
+    explicit fakeEngine(QObject *parent = nullptr);
 
 
     double powerKw;
@@ -39,9 +42,14 @@ public:
     bool indicatorRight;
     bool handBrake;
 
-
+    double getCurrentVE(double rpm, double pressureBar);
 
     fakeEngine();
+
+
+public slots:
+    void tickEngine();
+
 };
 
 #endif // FAKEENGINE_H

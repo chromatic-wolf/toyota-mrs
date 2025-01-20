@@ -4,7 +4,7 @@
 #include <QQuickView>
 
 #include "myclass.h"
-
+#include "fakeengine.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,9 +19,11 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.loadFromModule("Dashboard2", "Main");
 
+    fakeEngine engine();
 
-
-
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), engine, SLOT(fakeEngine::tickEngine()));
+    timer->start(1000);
 
 
     MyClass myClass(engine);
