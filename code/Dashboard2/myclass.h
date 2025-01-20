@@ -16,6 +16,8 @@ public slots:
     void cppSlot(const int &msg);
     void buttonPressed();
     void exitPressed();
+    void rpmUpdateSlot(QString text);
+        void pressureUpdateSlot(QString text);
 
 signals:
 };

@@ -1,5 +1,6 @@
 appDashboard2_autogen/timestamp: \
 	C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/QObject \
+	C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/QString \
 	C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/q20memory.h \
 	C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/q20type_traits.h \
@@ -1609,6 +1610,4 @@ appDashboard2_autogen/timestamp: \
 	C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/myclass.cpp \
 	C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/myclass.h \
 	C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/qml.qrc \
-	C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.cpp \
-	C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.h \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

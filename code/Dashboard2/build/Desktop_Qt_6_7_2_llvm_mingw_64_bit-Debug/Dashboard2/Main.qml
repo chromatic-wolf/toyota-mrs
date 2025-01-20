@@ -37,6 +37,27 @@ Window{
 
 
 
+        Text {
+            id: rpmTxt
+            objectName: rpmTxt
+            text: "RPM \n 0"
+            font.family: "Helvetica"
+            font.pointSize: 24
+            color: "red"
+
+            Text {
+                id: pressureTxt
+                objectName: pressureTxt
+
+                text: "Pressure \n 0"
+                font.family: "Helvetica"
+                font.pointSize: 24
+                color: "red"
+                anchors.left: parent.right
+                       anchors.top: parent.top
+            }
+        }
+
 
 
 

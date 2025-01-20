@@ -1,6 +1,7 @@
 C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug/appDashboard2_autogen/EWIEGA46WW/moc_fakeengine.cpp: C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/fakeengine.h \
   C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug/appDashboard2_autogen/moc_predefs.h \
   C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/QObject \
+  C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/QString \
   C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/llvm-mingw_64/include/QtCore/q20type_traits.h \

@@ -109,13 +109,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 48,
+				"line" : 49,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 43,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
@@ -1070,16 +1070,16 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 0,
+			"id" : "appDashboard2_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 82,
 			"id" : "appDashboard2_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 84,
 			"id" : "appDashboard2_tooling::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "appDashboard2_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "appDashboard2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"

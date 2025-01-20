@@ -40,7 +40,10 @@ constexpr auto qt_meta_stringdata_CLASSMyClassENDCLASS = QtMocHelpers::stringDat
     "",
     "msg",
     "buttonPressed",
-    "exitPressed"
+    "exitPressed",
+    "rpmUpdateSlot",
+    "text",
+    "pressureUpdateSlot"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -53,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMyClassENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,14 +64,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMyClassENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x0a,    1 /* Public */,
-       4,    0,   35,    2, 0x0a,    3 /* Public */,
-       5,    0,   36,    2, 0x0a,    4 /* Public */,
+       1,    1,   44,    2, 0x0a,    1 /* Public */,
+       4,    0,   47,    2, 0x0a,    3 /* Public */,
+       5,    0,   48,    2, 0x0a,    4 /* Public */,
+       6,    1,   49,    2, 0x0a,    5 /* Public */,
+       8,    1,   52,    2, 0x0a,    7 /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::Void, QMetaType::QString,    7,
 
        0        // eod
 };
@@ -88,7 +95,13 @@ Q_CONSTINIT const QMetaObject MyClass::staticMetaObject = { {
         // method 'buttonPressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'exitPressed'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'rpmUpdateSlot'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'pressureUpdateSlot'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
 } };
@@ -102,6 +115,8 @@ void MyClass::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 0: _t->cppSlot((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 1: _t->buttonPressed(); break;
         case 2: _t->exitPressed(); break;
+        case 3: _t->rpmUpdateSlot((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->pressureUpdateSlot((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -126,13 +141,13 @@ int MyClass::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 5;
     }
     return _id;
 }

@@ -2,6 +2,7 @@
 #include <QDebug>
 #include <QQmlApplicationEngine>
 #include <QQuickItem>
+#include <QString>
 
 QQmlApplicationEngine *eng;
 bool animationTriggered = false;
@@ -41,4 +42,16 @@ void MyClass::buttonPressed()
 void MyClass::exitPressed()
 {
     QCoreApplication::quit();
+}
+
+void MyClass::rpmUpdateSlot(QString text)
+{
+    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("rpmTxt");
+    item->setProperty("text", text);
+}
+
+void MyClass::pressureUpdateSlot(QString text)
+{
+    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("pressureText");
+    item->setProperty("text", text);
 }

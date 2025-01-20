@@ -5,6 +5,30 @@
                 "className": "fakeEngine",
                 "object": true,
                 "qualifiedClassName": "fakeEngine",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "rpm",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getRpm",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "pressure",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getPressure",
+                        "returnType": "void"
+                    }
+                ],
                 "slots": [
                     {
                         "access": "public",
@@ -50,6 +74,28 @@
                         "access": "public",
                         "name": "exitPressed",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "rpmUpdateSlot",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "pressureUpdateSlot",
+                        "returnType": "void"
                     }
                 ],
                 "superClasses": [
@@ -61,37 +107,6 @@
             }
         ],
         "inputFile": "myclass.h",
-        "outputRevision": 68
-    },
-    {
-        "classes": [
-            {
-                "className": "testClass",
-                "object": true,
-                "qualifiedClassName": "testClass",
-                "signals": [
-                    {
-                        "access": "public",
-                        "name": "testSignal",
-                        "returnType": "void"
-                    }
-                ],
-                "slots": [
-                    {
-                        "access": "public",
-                        "name": "testSlot",
-                        "returnType": "void"
-                    }
-                ],
-                "superClasses": [
-                    {
-                        "access": "public",
-                        "name": "QObject"
-                    }
-                ]
-            }
-        ],
-        "inputFile": "testclass.h",
         "outputRevision": 68
     }
 ]

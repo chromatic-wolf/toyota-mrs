@@ -1,5 +1,6 @@
 #include "fakeengine.h"
 #include <random>
+#include <QString>
 #include <iostream>
 
 
@@ -126,6 +127,8 @@ void fakeEngine::tickEngine()
         }
     }
 
+    this->getPressure(QString("Pressure \n ") + QString::number(currentManifoldPressure));
+    this->getRpm(QString("RPM \n ") + QString::number(currentRPM));
 
     std::cout << "Engine RPM: " << currentRPM << std::endl;
     std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;

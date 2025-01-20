@@ -4,6 +4,30 @@
             "className": "fakeEngine",
             "object": true,
             "qualifiedClassName": "fakeEngine",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "rpm",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "getRpm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "pressure",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "getPressure",
+                    "returnType": "void"
+                }
+            ],
             "slots": [
                 {
                     "access": "public",

@@ -1,6 +1,7 @@
 #ifndef FAKEENGINE_H
 #define FAKEENGINE_H
 #include <QObject>
+#include <QString>
 
 class fakeEngine : public QObject
 {
@@ -49,6 +50,11 @@ public:
 
 public slots:
     void tickEngine();
+
+signals:
+    void getRpm(QString rpm);
+    void getPressure(QString pressure);
+
 
 };
 

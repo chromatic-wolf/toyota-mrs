@@ -27,7 +27,7 @@ qt_add_qml_module(appDashboard2
         RESOURCES qml.qrc
         SOURCES common/enginestats.h common/enginestats.cpp
         SOURCES fakeengine.h fakeengine.cpp
-        SOURCES testclass.h testclass.cpp
+        SOURCES
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

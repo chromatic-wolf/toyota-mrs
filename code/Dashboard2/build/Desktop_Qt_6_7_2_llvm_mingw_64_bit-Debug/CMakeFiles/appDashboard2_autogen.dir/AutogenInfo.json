@@ -1001,12 +1001,6 @@
 			"MU",
 			"EWIEGA46WW/moc_myclass.cpp",
 			null
-		],
-		[
-			"C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.h",
-			"MU",
-			"EWIEGA46WW/moc_testclass.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -1120,11 +1114,6 @@
 		],
 		[
 			"C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/myclass.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/testclass.cpp",
 			"MU",
 			null
 		]

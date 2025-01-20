@@ -25,6 +25,28 @@
                     "access": "public",
                     "name": "exitPressed",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "rpmUpdateSlot",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "pressureUpdateSlot",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [
