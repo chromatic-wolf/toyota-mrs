@@ -23,8 +23,9 @@ double veTable[15][20]=
 double rpmMap[20] =
     {
         0,500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,1000
-}
+};
 
+double pressureMapBar[15] = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1};
 
 
 double fakeEngine::getCurrentVE(double rpm, double pressureBar)
