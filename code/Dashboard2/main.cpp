@@ -43,8 +43,8 @@ int main(int argc, char *argv[])
     QObject::connect(engine.rootObjects().at(0)->findChild<QObject*>("shutdownBtn"), SIGNAL(exitPressed()),
                      &myClass, SLOT(exitPressed()));
 
-    QObject::connect(&myEngine, SIGNAL(getRpm(QString)), &myClass, SLOT(rpmUpdateSlot(QString)));
-    QObject::connect(&myEngine, SIGNAL(getPressure(QString)), &myClass, SLOT(pressureUpdateSlot(QString)));
+    QObject::connect(&myEngine, SIGNAL(getRpm(double)), &myClass, SLOT(rpmUpdateSlot(double)));
+    QObject::connect(&myEngine, SIGNAL(getPressure(double)), &myClass, SLOT(pressureUpdateSlot(double)));
 
 
     return app.exec();

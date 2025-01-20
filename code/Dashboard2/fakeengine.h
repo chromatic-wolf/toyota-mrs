@@ -52,8 +52,9 @@ public slots:
     void tickEngine();
 
 signals:
-    void getRpm(QString rpm);
-    void getPressure(QString pressure);
+    void getRpm(double rpm);
+    void getPressure(double pressure);
+
 
 
 };

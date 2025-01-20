@@ -44,14 +44,14 @@ void MyClass::exitPressed()
     QCoreApplication::quit();
 }
 
-void MyClass::rpmUpdateSlot(QString text)
+void MyClass::rpmUpdateSlot(double text)
 {
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("rpmTxt");
-    item->setProperty("text", text);
+    item->setProperty("text", QString("RPM \n" + QString::number(text)));
 }
 
-void MyClass::pressureUpdateSlot(QString text)
+void MyClass::pressureUpdateSlot(double text)
 {
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("pressureTxt");
-    item->setProperty("text", text);
+    item->setProperty("text", QString("Pressure \n" + QString::number(text) ));
 }

@@ -127,8 +127,8 @@ void fakeEngine::tickEngine()
         }
     }
 
-    emit getPressure(QString("Pressure \n ") + QString::number(currentManifoldPressure));
-    emit getRpm(QString("RPM \n ") + QString::number(currentRPM));
+    emit getPressure(currentManifoldPressure);
+    emit getRpm(currentRPM);
 
     std::cout << "Engine RPM: " << currentRPM << std::endl;
     std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
