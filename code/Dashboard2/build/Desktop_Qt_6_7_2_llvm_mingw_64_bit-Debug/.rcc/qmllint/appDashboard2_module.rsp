@@ -1,0 +1,10 @@
+-I
+C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug
+-I
+C:/Qt/6.7.2/llvm-mingw_64/./qml
+--resource
+C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug/.qt/rcc/qmake_Dashboard2.qrc
+--resource
+C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/build/Desktop_Qt_6_7_2_llvm_mingw_64_bit-Debug/.qt/rcc/appDashboard2_raw_qml_0.qrc
+--module
+Dashboard2

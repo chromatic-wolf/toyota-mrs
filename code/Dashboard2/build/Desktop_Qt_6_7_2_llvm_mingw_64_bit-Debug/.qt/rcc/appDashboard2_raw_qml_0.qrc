@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/Dashboard2/">
+    <file alias="Main.qml">C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/Main.qml</file>
+    <file alias="qml.qrc">C:/Users/Manager-PC/Documents/GitHub/toyota-mrs/code/Dashboard2/qml.qrc</file>
+  </qresource>
+</RCC>
+

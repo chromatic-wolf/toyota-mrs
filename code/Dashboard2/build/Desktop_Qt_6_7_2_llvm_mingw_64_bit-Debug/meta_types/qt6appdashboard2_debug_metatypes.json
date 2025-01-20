@@ -1,0 +1,42 @@
+[
+    {
+        "classes": [
+            {
+                "className": "MyClass",
+                "object": true,
+                "qualifiedClassName": "MyClass",
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "msg",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "cppSlot",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "buttonPressed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "exitPressed",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "myclass.h",
+        "outputRevision": 68
+    }
+]

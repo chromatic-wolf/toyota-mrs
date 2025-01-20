@@ -1,0 +1,47 @@
+#ifndef FAKEENGINE_H
+#define FAKEENGINE_H
+
+class fakeEngine
+{
+public:
+    //this class will represent a fake engine that generates somewhat realistic values to be used to debug the dashboard UI and other systems.
+
+
+    double powerKw;
+    double torqueNm;
+    double rpm;
+    double IAT;
+    double LAMBDA;
+    double volumetricEfficancy;
+    double mapBar;
+    double exhaustPressure;
+    double exhaustTemp;
+    double coolantTemp;
+    double throttlePosition;
+    double brakePosition;
+    double oilPressure;
+
+
+    double wheelSpeed;
+    int gear;
+    double FLWheelSpeed;
+    double FRWheelSpeed;
+    double RLWheelSpeed;
+    double RRWheelSpeed;
+    double longGForce;
+    double latGForce;
+    double underBodyPressureFront;
+    double underBodyPressureRear;
+    double torqueSplitPercentage;
+
+    bool headlight;
+    bool indicatorLeft;
+    bool indicatorRight;
+    bool handBrake;
+
+    
+
+    fakeEngine();
+};
+
+#endif // FAKEENGINE_H
