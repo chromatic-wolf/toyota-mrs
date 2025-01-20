@@ -20,22 +20,56 @@ double veTable[15][20]=
 };
 
 
-double rpmMap[20] =
-    {
-        0,500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,1000
-};
+double rpmMap[20] = {0,500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,1000};
 
-double pressureMapBar[15] = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1};
+double pressureMapBar[15] = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25};
+
+bool enigneStarted = false;
+
+double currentManifoldPressure;
+double currentRPM;
+
+
+int find_closest(const vector<double>& A, const double a)
+{
+    if(A.size() <=0)
+        throw std::invalid_argument("empty array");
+
+    const auto lb = std::lower_bound(A.begin(), A.end(), a);
+    int ans = lb!= A.end() ? *lb : A.back();
+    if (lb != A.begin()) {
+        auto prec = lb - 1;
+        if (abs(ans - a) > abs(*prec - a))
+            ans = *prec;
+    }
+
+    return ans;
+}
+
+
 
 
 double fakeEngine::getCurrentVE(double rpm, double pressureBar)
 {
-
+    int currentPosRpm = find_closest(rpmMap, rpm);
+    int currentPosPressure = find_closest(pressureMapBar, pressureBar);
+    return veTable[currentPosPressure][currentPosRpm];
 }
 fakeEngine::fakeEngine() {
 
+}
 
-
-
+//This function will tick the engine over so every time it is called some random "algorithm" will move the core engine values (rpm and load probably) in order to test the GUI systems ect.
+//Load is based on RPM and manifold pressure so makes sense to move these values and everything else should be derived from those.
+void fakeEngine::tickEngine()
+{
+    //if engine is just started aka first tick then set load and rpm to lowest value.
+    if (engineStarted == false)
+        {
+        currentManifoldPressure = 0.15;
+        currentRPM = 500;
+        engineStarted = true;
+        }
+    std::cout << "Moving engine RPM up" << std::endl;
 
 }
