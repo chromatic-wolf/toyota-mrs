@@ -48,6 +48,17 @@
                     ],
                     "name": "getCurrentTorque",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "powerKw",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "getCurrentPowerKw",
+                    "returnType": "void"
                 }
             ],
             "slots": [

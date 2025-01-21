@@ -22,18 +22,16 @@ double EngineStats::power_Calculator(double torqueNm, double RPM)
     return torqueNm* rpmToRadPerSec(RPM);
 }
 
-double EngineStats::calculateTorque(double volumetricEfficiency, double massAirFlow, double intakeTempCelsius, double rpm)
+double EngineStats::calculateTorque(double volumetricEfficiency, double massAirFlowKgSec, double intakeTempCelsius, double rpm)
 {
-    // Convert MAF from grams/second to kilograms/second
-    double massAirFlowKg = massAirFlow / 1000.0;
 
     // Calculate torque
-    double torque = (volumetricEfficiency * massAirFlowKg * GAS_CONSTANT * degreesToKelvin(intakeTempCelsius)) / (2 * M_PI * rpm);
+    double torque = (volumetricEfficiency * massAirFlowKgSec * GAS_CONSTANT * degreesToKelvin(intakeTempCelsius)) / (2 * M_PI * rpm);
 
     return torque;
 }
 
-double EngineStats::calculateMAF(double absolutePressure, double airTemperature, double engineDisplacementCC, double volumetricEfficiency, double rpm)
+double EngineStats::calculateMAF(double absolutePressureBar, double airTemperature, double engineDisplacementCC, double volumetricEfficiency, double rpm)
 {
     // Convert temperature from Celsius to Kelvin
     double temperatureK = degreesToKelvin(airTemperature);
@@ -42,7 +40,7 @@ double EngineStats::calculateMAF(double absolutePressure, double airTemperature,
     double displacementM3 = engineDisplacementCC / 1'000'000.0;
 
     // Calculate mass air flow (kg/s)
-    double maf = (volumetricEfficiency * absolutePressure * displacementM3 * rpm / 2.0) / (GAS_CONSTANT * temperatureK);
+    double maf = (volumetricEfficiency * barToKiloPascal(absolutePressureBar) * displacementM3 * rpm / 2.0) / (GAS_CONSTANT * temperatureK);
 
     return maf;
 }
@@ -61,6 +59,16 @@ double EngineStats::pressureRatio_Calculator(double pre_turbine_pressure, double
 double EngineStats::megaPascalToBar(double megaPascal)
 {
     return megaPascal*10;
+}
+
+double EngineStats::kiloPascalToBar(double kiloPascal)
+{
+    return kiloPascal / 100;
+}
+
+double EngineStats::barToKiloPascal(double bar)
+{
+    return bar * 100;
 }
 
 double EngineStats::degreesToKelvin(double degrees)

@@ -29,6 +29,9 @@ public:
 
     //converts a megapascal to bar pressure
    static double megaPascalToBar(double megaPascal);
+   static double kiloPascalToBar(double kiloPascal);
+   static double barToKiloPascal(double bar);
+
 
     //converts dedgrees to kelvin
    static double degreesToKelvin(double degrees);

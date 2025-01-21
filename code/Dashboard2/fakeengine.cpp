@@ -101,13 +101,20 @@ void fakeEngine::tickEngine()
 
     currentVE = getCurrentVE(currentRPM, currentManifoldPressure);
     torqueNm = EngineStats::calculateTorque(currentVE,EngineStats::calculateMAF(currentManifoldPressure,32,2000,currentVE,currentRPM),42,currentRPM);
+    powerKw = EngineStats::power_Calculator(torqueNm,currentRPM);
     emit getPressure(currentManifoldPressure);
     emit getRpm(currentRPM);
     emit getCurrentVe(currentVE);
     emit getCurrentTorque(torqueNm);
+    emit getCurrentPowerKw(powerKw);
 
     std::cout << "Engine RPM: " << currentRPM << std::endl;
     std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
+    std::cout << "Engine VE: " << currentVE << std::endl;
+    std::cout << "Engine Torque Nm: " << torqueNm << std::endl;
+    std::cout << "Engine power KW: " << powerKw << std::endl;
+
+
 
 }
 

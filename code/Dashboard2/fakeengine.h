@@ -58,6 +58,7 @@ signals:
     void getPressure(double pressure);
     void getCurrentVe(double VE);
     void getCurrentTorque(double torqueNm);
+    void getCurrentPowerKw(double powerKw);
 
 
 

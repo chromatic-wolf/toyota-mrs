@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
     QObject::connect(&myEngine, SIGNAL(getPressure(double)), &myClass, SLOT(pressureUpdateSlot(double)));
     QObject::connect(&myEngine, SIGNAL(getCurrentVe(double)), &myClass, SLOT(veUpdateSlot(double)));
     QObject::connect(&myEngine, SIGNAL(getCurrentTorque(double)), &myClass, SLOT(torqueUpdateSlot(double)));
+    QObject::connect(&myEngine, SIGNAL(getCurrentPowerKw(double)), &myClass, SLOT(powerUpdateSlot(double)));
 
 
 
