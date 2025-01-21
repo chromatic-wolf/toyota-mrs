@@ -38,6 +38,7 @@ std::vector<double> pressureMapBar = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2,
 bool enigneStarted = false;
 double currentManifoldPressure;
 double currentRPM;
+double currentVE;
 
 std::random_device rd;
 
@@ -127,9 +128,10 @@ void fakeEngine::tickEngine()
             currentManifoldPressure = currentManifoldPressure - 0.15;
         }
     }
-
+    currentVE = getCurrentVE(currentRPM, currentManifoldPressure);
     emit getPressure(currentManifoldPressure);
     emit getRpm(currentRPM);
+    emit getCurrentVe(currentVE);
 
     std::cout << "Engine RPM: " << currentRPM << std::endl;
     std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;

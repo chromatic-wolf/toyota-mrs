@@ -54,6 +54,7 @@ public slots:
 signals:
     void getRpm(double rpm);
     void getPressure(double pressure);
+    void getCurrentVe(double VE);
 
 
 
