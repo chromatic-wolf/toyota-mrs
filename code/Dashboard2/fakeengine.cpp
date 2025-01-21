@@ -82,8 +82,6 @@ double fakeEngine::getCurrentVE(double rpm, double pressureBar)
 {
     int currentPosRpm = findClosestIndex(rpmMap, rpm);
     int currentPosPressure = findClosestIndex(pressureMapBar, pressureBar);
-    std::cout << "CurrentRPMPOS: " << currentPosRpm << std::endl;
-    std::cout << "CurrentPressurePos: " << currentPosPressure << std::endl;
     return veTable[currentPosPressure][currentPosRpm];
 }
 
@@ -99,48 +97,14 @@ void fakeEngine::tickEngine()
         currentRPM = 500;
         enigneStarted = true;
     }
-    std::cout << "Moving engine RPM and load" << std::endl;
-    //figure out if rpm is at max or min values to determin if it can rais or lower or can do both
-    if(currentRPM <= 500)
-    {
-        currentRPM = currentRPM + 50;
-    }else if(currentRPM >= 10000)
-    {
-        currentRPM = currentRPM - 50;
-    }else
-    {
-        if(generateRandomValue() == 1)
-        {
-            currentRPM = currentRPM + 50;
-        }else
-        {
-            currentRPM = currentRPM - 50;
-        }
-    }
 
-    if(currentManifoldPressure <= 0.15)
-    {
-        currentManifoldPressure = currentManifoldPressure + 0.15;
-    }else if(currentManifoldPressure >= 2.25)
-    {
-        currentManifoldPressure = currentManifoldPressure - 0.15;
-    }else
-    {
-        if(generateRandomValue() == 1)
-        {
-            currentManifoldPressure = currentManifoldPressure + 0.15;
-        }else
-        {
-            currentManifoldPressure = currentManifoldPressure - 0.15;
-        }
-    }
     currentVE = getCurrentVE(currentRPM, currentManifoldPressure);
     emit getPressure(currentManifoldPressure);
     emit getRpm(currentRPM);
     emit getCurrentVe(currentVE);
 
-    //std::cout << "Engine RPM: " << currentRPM << std::endl;
-    //std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
+    std::cout << "Engine RPM: " << currentRPM << std::endl;
+    std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
 
 }
 
@@ -153,8 +117,7 @@ void fakeEngine::adjustPressure(int value)
 
 void fakeEngine::adjustRpm(int value)
 {
-    std::cout << value << std::endl;
     //std::cout << static_cast<int>(mapRange(value,0,100,0,19)) << '\n';
     currentRPM = rpmMap[static_cast<int>(mapRange(value,0,100,0,19))];
-    //std::cout << "Current rpm: " << currentRPM << '\n';
+   // std::cout << "Current rpm: " << currentRPM << '\n';
 }

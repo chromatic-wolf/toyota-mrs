@@ -3,6 +3,7 @@
 #include <QQmlApplicationEngine>
 #include <QQuickItem>
 #include <QString>
+#include <iostream>
 
 QQmlApplicationEngine *eng;
 bool animationTriggered = false;
@@ -47,13 +48,13 @@ void MyClass::exitPressed()
 void MyClass::rpmUpdateSlot(double text)
 {
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("rpmTxt");
-    item->setProperty("text", QString("RPM \n" + QString::number(text)));
+    item->setProperty("text", QString("RPM \n " + QString::number(text)));
 }
 
 void MyClass::pressureUpdateSlot(double text)
 {
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("pressureTxt");
-    item->setProperty("text", QString("Pressure \n" + QString::number(text) ));
+    item->setProperty("text", QString("Pressure \n " + QString::number(text) ));
 }
 
 void MyClass::veUpdateSlot(double text)

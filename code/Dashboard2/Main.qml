@@ -44,36 +44,41 @@ Window{
             font.family: "Helvetica"
             font.pointSize: 24
             color: "red"
+        }
+        Text {
+            id: pressureTxt
+            objectName: "pressureTxt"
 
-            Text {
-                id: pressureTxt
-                objectName: "pressureTxt"
+            text: "Pressure \n 0"
+            font.family: "Helvetica"
+            font.pointSize: 24
+            color: "red"
+            anchors.left: rpmTxt.right
+            anchors.top: rpmTxt.top
+        }
+        Text {
+            id: veTxt
+            objectName: "veTxt"
 
-                text: "Pressure \n 0"
-                font.family: "Helvetica"
-                font.pointSize: 24
-                color: "red"
-                anchors.left: parent.right
-                       anchors.top: parent.top
-
-
-                       Text {
-                           id: veTxt
-                           objectName: "veTxt"
-
-                           text: "Volumetric efficiency \n 0"
-                           font.family: "Helvetica"
-                           font.pointSize: 24
-                           color: "red"
-                           anchors.left: parent.right
-                                  anchors.top: parent.top
-                       }
-
-            }
-
-
+            text: "Volumetric efficiency \n 0"
+            font.family: "Helvetica"
+            font.pointSize: 24
+            color: "red"
+            anchors.left: pressureTxt.right
+            anchors.top: pressureTxt.top
         }
 
+        Text {
+            id: powerTxt
+            objectName: "powerTxt"
+
+            text: "Power KW \n 0"
+            font.family: "Helvetica"
+            font.pointSize: 24
+            color: "red"
+            anchors.left: veTxt.right
+            anchors.top: veTxt.top
+        }
 
 
 
@@ -88,7 +93,7 @@ Window{
             anchors.horizontalCenter: parent.horizontalCenter
 
             signal qmlPressed()
-           onClicked: button.qmlPressed()
+            onClicked: button.qmlPressed()
 
             Connections {
                 target: button
@@ -107,7 +112,7 @@ Window{
             anchors.rightMargin: 408
             anchors.bottomMargin: 27
             signal exitPressed()
-           onClicked: shutdownBtn.exitPressed()
+            onClicked: shutdownBtn.exitPressed()
         }
 
         Text {
@@ -174,7 +179,7 @@ Window{
             anchors.bottom: label.bottom
             anchors.bottomMargin: -72
             anchors.horizontalCenter: label.horizontalCenter
-             signal qmlSignal(msg: int)
+            signal qmlSignal(msg: int)
             onMoved: slider.qmlSignal(slider.value)
         }
 
@@ -187,7 +192,7 @@ Window{
             anchors.bottom: slider.bottom
             anchors.bottomMargin: -72
             anchors.horizontalCenter: label.horizontalCenter
-             signal rmpSignal(msg: int)
+            signal rmpSignal(msg: int)
             onMoved: slider2.rmpSignal(slider2.value)
 
         }
