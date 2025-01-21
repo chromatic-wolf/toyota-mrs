@@ -31,7 +31,7 @@
                     "arguments": [
                         {
                             "name": "text",
-                            "type": "QString"
+                            "type": "double"
                         }
                     ],
                     "name": "rpmUpdateSlot",
@@ -42,7 +42,7 @@
                     "arguments": [
                         {
                             "name": "text",
-                            "type": "QString"
+                            "type": "double"
                         }
                     ],
                     "name": "pressureUpdateSlot",

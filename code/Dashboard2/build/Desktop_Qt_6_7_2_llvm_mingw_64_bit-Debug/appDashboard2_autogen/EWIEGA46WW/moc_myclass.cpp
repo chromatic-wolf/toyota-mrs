@@ -74,8 +74,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMyClassENDCLASS[] = {
     QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    7,
-    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::Void, QMetaType::Double,    7,
+    QMetaType::Void, QMetaType::Double,    7,
 
        0        // eod
 };
@@ -98,10 +98,10 @@ Q_CONSTINIT const QMetaObject MyClass::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'rpmUpdateSlot'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>,
         // method 'pressureUpdateSlot'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<double, std::false_type>
     >,
     nullptr
 } };
@@ -115,8 +115,8 @@ void MyClass::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 0: _t->cppSlot((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 1: _t->buttonPressed(); break;
         case 2: _t->exitPressed(); break;
-        case 3: _t->rpmUpdateSlot((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: _t->pressureUpdateSlot((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->rpmUpdateSlot((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 4: _t->pressureUpdateSlot((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     }

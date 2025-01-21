@@ -39,7 +39,7 @@ Window{
 
         Text {
             id: rpmTxt
-            objectName: rpmTxt
+            objectName: "rpmTxt"
             text: "RPM \n 0"
             font.family: "Helvetica"
             font.pointSize: 24
@@ -47,7 +47,7 @@ Window{
 
             Text {
                 id: pressureTxt
-                objectName: pressureTxt
+                objectName: "pressureTxt"
 
                 text: "Pressure \n 0"
                 font.family: "Helvetica"

@@ -8,7 +8,7 @@ fakeEngine::fakeEngine(QObject *parent)
     : QObject{parent}
 {}
 
-
+//random example VE map
 double veTable[15][20]=
     {
         {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10},
@@ -28,13 +28,14 @@ double veTable[15][20]=
         {49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 52, 53, 53, 53, 53, 53, 53, 53, 53}
 };
 
-
+// ve table rpm column
 std::vector<double> rpmMap = {0.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0,5500.0,6000.0,6500.0,7000.0,7500.0,8000.0,8500.0,9000.0,1000.0};
 
+//ve table pressure rows
 std::vector<double> pressureMapBar = {0.15, 0.3, 0.45, 0.6, 0.75,0.9, 1.05, 1.2, 1.35, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25};
 
-bool enigneStarted = false;
 
+bool enigneStarted = false;
 double currentManifoldPressure;
 double currentRPM;
 
@@ -52,7 +53,7 @@ double generateRandomValue() {
     return dis(gen);
 }
 
-
+//function to find the closest value in a array
 int find_closest(const std::vector<double>& A, const double a)
 {
     if(A.size() <=0)
@@ -71,7 +72,7 @@ int find_closest(const std::vector<double>& A, const double a)
 
 
 
-
+//returns the current VE
 double fakeEngine::getCurrentVE(double rpm, double pressureBar)
 {
     int currentPosRpm = find_closest(rpmMap, rpm);

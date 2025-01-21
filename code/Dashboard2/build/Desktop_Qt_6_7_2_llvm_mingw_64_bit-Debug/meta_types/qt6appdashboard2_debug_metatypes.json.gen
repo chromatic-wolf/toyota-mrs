@@ -11,7 +11,7 @@
                         "arguments": [
                             {
                                 "name": "rpm",
-                                "type": "QString"
+                                "type": "double"
                             }
                         ],
                         "name": "getRpm",
@@ -22,7 +22,7 @@
                         "arguments": [
                             {
                                 "name": "pressure",
-                                "type": "QString"
+                                "type": "double"
                             }
                         ],
                         "name": "getPressure",
@@ -80,7 +80,7 @@
                         "arguments": [
                             {
                                 "name": "text",
-                                "type": "QString"
+                                "type": "double"
                             }
                         ],
                         "name": "rpmUpdateSlot",
@@ -91,7 +91,7 @@
                         "arguments": [
                             {
                                 "name": "text",
-                                "type": "QString"
+                                "type": "double"
                             }
                         ],
                         "name": "pressureUpdateSlot",

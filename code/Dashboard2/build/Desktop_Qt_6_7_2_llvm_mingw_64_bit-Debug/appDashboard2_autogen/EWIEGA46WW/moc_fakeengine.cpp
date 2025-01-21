@@ -69,8 +69,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSfakeEngineENDCLASS[] = {
        6,    0,   38,    2, 0x0a,    5 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void, QMetaType::Double,    3,
+    QMetaType::Void, QMetaType::Double,    5,
 
  // slots: parameters
     QMetaType::Void,
@@ -89,10 +89,10 @@ Q_CONSTINIT const QMetaObject fakeEngine::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<fakeEngine, std::true_type>,
         // method 'getRpm'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>,
         // method 'getPressure'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>,
         // method 'tickEngine'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -105,22 +105,22 @@ void fakeEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<fakeEngine *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->getRpm((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->getPressure((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->getRpm((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 1: _t->getPressure((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 2: _t->tickEngine(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (fakeEngine::*)(QString );
+            using _t = void (fakeEngine::*)(double );
             if (_t _q_method = &fakeEngine::getRpm; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
         {
-            using _t = void (fakeEngine::*)(QString );
+            using _t = void (fakeEngine::*)(double );
             if (_t _q_method = &fakeEngine::getPressure; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
@@ -160,14 +160,14 @@ int fakeEngine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void fakeEngine::getRpm(QString _t1)
+void fakeEngine::getRpm(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
-void fakeEngine::getPressure(QString _t1)
+void fakeEngine::getPressure(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);

@@ -10,7 +10,7 @@
                     "arguments": [
                         {
                             "name": "rpm",
-                            "type": "QString"
+                            "type": "double"
                         }
                     ],
                     "name": "getRpm",
@@ -21,7 +21,7 @@
                     "arguments": [
                         {
                             "name": "pressure",
-                            "type": "QString"
+                            "type": "double"
                         }
                     ],
                     "name": "getPressure",
