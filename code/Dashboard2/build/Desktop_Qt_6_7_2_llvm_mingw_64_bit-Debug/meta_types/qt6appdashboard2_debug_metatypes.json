@@ -38,6 +38,17 @@
                         ],
                         "name": "getCurrentVe",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "torqueNm",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "getCurrentTorque",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
@@ -139,6 +150,28 @@
                             }
                         ],
                         "name": "veUpdateSlot",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "torqueUpdateSlot",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "powerUpdateSlot",
                         "returnType": "void"
                     }
                 ],

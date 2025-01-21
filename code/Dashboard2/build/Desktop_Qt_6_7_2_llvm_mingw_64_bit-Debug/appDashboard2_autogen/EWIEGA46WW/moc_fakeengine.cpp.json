@@ -37,6 +37,17 @@
                     ],
                     "name": "getCurrentVe",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "torqueNm",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "getCurrentTorque",
+                    "returnType": "void"
                 }
             ],
             "slots": [

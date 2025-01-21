@@ -19,6 +19,8 @@ public slots:
     void rpmUpdateSlot(double text);
     void pressureUpdateSlot(double text);
     void veUpdateSlot(double text);
+    void torqueUpdateSlot(double value);
+    void powerUpdateSlot(double value);
 
 signals:
 };

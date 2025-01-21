@@ -58,6 +58,28 @@
                     ],
                     "name": "veUpdateSlot",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "torqueUpdateSlot",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "powerUpdateSlot",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [

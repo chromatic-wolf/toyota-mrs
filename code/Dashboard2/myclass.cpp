@@ -62,3 +62,15 @@ void MyClass::veUpdateSlot(double text)
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("veTxt");
     item->setProperty("text", QString("Volumetric efficiency \n" + QString::number(text) ));
 }
+
+void MyClass::torqueUpdateSlot(double value)
+{
+    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("torqueTxt");
+    item->setProperty("text", QString("Torque Nm \n" + QString::number(value) ));
+}
+
+void MyClass::powerUpdateSlot(double value)
+{
+    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("powerTxt");
+    item->setProperty("text", QString("Power Kw \n" + QString::number(value) ));
+}

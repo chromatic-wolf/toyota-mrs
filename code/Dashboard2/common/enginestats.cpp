@@ -1,6 +1,10 @@
 #include "enginestats.h"
 #include <math.h>
 
+static double GAS_CONSTANT = 287.05;
+
+
+
 //retures BMEP in BAR
 //(2 x pi x revolutions per power stroke (2) x torque (nm) ) / displacement = BMEP in mega pascals
 double EngineStats::BMEP_Calculator(int revolutionPerPowerStroke, double torqueNm, double displacementCC)

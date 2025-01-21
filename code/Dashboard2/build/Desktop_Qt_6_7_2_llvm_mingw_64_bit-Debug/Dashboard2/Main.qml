@@ -80,6 +80,18 @@ Window{
             anchors.top: veTxt.top
         }
 
+        Text {
+            id: torqueTxt
+            objectName: "torqueTxt"
+
+            text: "Torque Nm \n 0"
+            font.family: "Helvetica"
+            font.pointSize: 24
+            color: "red"
+            anchors.left: powerTxt.right
+            anchors.top: powerTxt.top
+        }
+
 
 
 

@@ -2,6 +2,7 @@
 #include <random>
 #include <QString>
 #include <iostream>
+#include "common/enginestats.h"
 
 
 fakeEngine::fakeEngine(QObject *parent)
@@ -99,9 +100,11 @@ void fakeEngine::tickEngine()
     }
 
     currentVE = getCurrentVE(currentRPM, currentManifoldPressure);
+    torqueNm = EngineStats::calculateTorque(currentVE,EngineStats::calculateMAF(currentManifoldPressure,32,2000,currentVE,currentRPM),42,currentRPM);
     emit getPressure(currentManifoldPressure);
     emit getRpm(currentRPM);
     emit getCurrentVe(currentVE);
+    emit getCurrentTorque(torqueNm);
 
     std::cout << "Engine RPM: " << currentRPM << std::endl;
     std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
