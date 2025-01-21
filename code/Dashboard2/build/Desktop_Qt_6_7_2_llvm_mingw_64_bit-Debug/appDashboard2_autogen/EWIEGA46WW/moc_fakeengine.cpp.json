@@ -26,6 +26,17 @@
                     ],
                     "name": "getPressure",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "VE",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "getCurrentVe",
+                    "returnType": "void"
                 }
             ],
             "slots": [

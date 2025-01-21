@@ -55,19 +55,23 @@ Window{
                 color: "red"
                 anchors.left: parent.right
                        anchors.top: parent.top
+
+
+                       Text {
+                           id: veTxt
+                           objectName: "veTxt"
+
+                           text: "Volumetric efficiency \n 0"
+                           font.family: "Helvetica"
+                           font.pointSize: 24
+                           color: "red"
+                           anchors.left: parent.right
+                                  anchors.top: parent.top
+                       }
+
             }
 
-            Text {
-                id: veTxt
-                objectName: "veTxt"
 
-                text: "Volumetric efficiency \n 0"
-                font.family: "Helvetica"
-                font.pointSize: 24
-                color: "red"
-                anchors.left: parent.right
-                       anchors.top: parent.top
-            }
         }
 
 

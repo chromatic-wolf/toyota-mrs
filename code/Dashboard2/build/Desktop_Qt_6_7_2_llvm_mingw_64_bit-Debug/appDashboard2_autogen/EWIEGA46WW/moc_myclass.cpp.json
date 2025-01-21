@@ -47,6 +47,17 @@
                     ],
                     "name": "pressureUpdateSlot",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "veUpdateSlot",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [

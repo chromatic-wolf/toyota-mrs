@@ -41,6 +41,8 @@ constexpr auto qt_meta_stringdata_CLASSfakeEngineENDCLASS = QtMocHelpers::string
     "rpm",
     "getPressure",
     "pressure",
+    "getCurrentVe",
+    "VE",
     "tickEngine"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -54,23 +56,25 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSfakeEngineENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x06,    1 /* Public */,
-       4,    1,   35,    2, 0x06,    3 /* Public */,
+       1,    1,   38,    2, 0x06,    1 /* Public */,
+       4,    1,   41,    2, 0x06,    3 /* Public */,
+       6,    1,   44,    2, 0x06,    5 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,   38,    2, 0x0a,    5 /* Public */,
+       8,    0,   47,    2, 0x0a,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Double,    3,
     QMetaType::Void, QMetaType::Double,    5,
+    QMetaType::Void, QMetaType::Double,    7,
 
  // slots: parameters
     QMetaType::Void,
@@ -93,6 +97,9 @@ Q_CONSTINIT const QMetaObject fakeEngine::staticMetaObject = { {
         // method 'getPressure'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
+        // method 'getCurrentVe'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>,
         // method 'tickEngine'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -107,7 +114,8 @@ void fakeEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->getRpm((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 1: _t->getPressure((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 2: _t->tickEngine(); break;
+        case 2: _t->getCurrentVe((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 3: _t->tickEngine(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -123,6 +131,13 @@ void fakeEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             using _t = void (fakeEngine::*)(double );
             if (_t _q_method = &fakeEngine::getPressure; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
+                return;
+            }
+        }
+        {
+            using _t = void (fakeEngine::*)(double );
+            if (_t _q_method = &fakeEngine::getCurrentVe; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 2;
                 return;
             }
         }
@@ -148,13 +163,13 @@ int fakeEngine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }
@@ -171,5 +186,12 @@ void fakeEngine::getPressure(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void fakeEngine::getCurrentVe(double _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_WARNING_POP

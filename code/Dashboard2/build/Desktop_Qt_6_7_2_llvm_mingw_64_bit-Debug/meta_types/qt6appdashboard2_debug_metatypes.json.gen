@@ -27,6 +27,17 @@
                         ],
                         "name": "getPressure",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "VE",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "getCurrentVe",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
@@ -95,6 +106,17 @@
                             }
                         ],
                         "name": "pressureUpdateSlot",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "text",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "veUpdateSlot",
                         "returnType": "void"
                     }
                 ],
