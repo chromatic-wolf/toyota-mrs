@@ -139,3 +139,8 @@ void fakeEngine::tickEngine()
     //std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
 
 }
+
+void fakeEngine::adjustPressure(double value)
+{
+
+}
