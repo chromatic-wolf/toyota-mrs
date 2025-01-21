@@ -18,12 +18,12 @@ MyClass::MyClass(QQmlApplicationEngine &engine)
 
 void MyClass::cppSlot(const int &msg)
 {
-qDebug() << "Called the C++ slot with message:" << msg;
+    qDebug() << "Called the C++ slot with message:" << msg;
 
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("myCar");
     item->setProperty("width", msg + 400);
 
-item->setProperty("height", msg + 400);
+    item->setProperty("height", msg + 400);
 
 
 }
@@ -33,7 +33,7 @@ void MyClass::buttonPressed()
     qDebug() << "Button pressed";
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("myCar");
 
-        item->setProperty("running", "false");
+    item->setProperty("running", "false");
     item->setProperty("running", "true");
 
 
@@ -54,4 +54,10 @@ void MyClass::pressureUpdateSlot(double text)
 {
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("pressureTxt");
     item->setProperty("text", QString("Pressure \n" + QString::number(text) ));
+}
+
+void MyClass::veUpdateSlot(double text)
+{
+    QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("veTxt");
+    item->setProperty("text", QString("Volumetric efficiency \n" + QString::number(text) ));
 }

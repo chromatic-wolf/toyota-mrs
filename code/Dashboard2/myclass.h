@@ -17,7 +17,8 @@ public slots:
     void buttonPressed();
     void exitPressed();
     void rpmUpdateSlot(double text);
-        void pressureUpdateSlot(double text);
+    void pressureUpdateSlot(double text);
+    void veUpdateSlot(double text);
 
 signals:
 };

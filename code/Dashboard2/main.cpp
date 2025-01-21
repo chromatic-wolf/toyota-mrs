@@ -46,6 +46,5 @@ int main(int argc, char *argv[])
     QObject::connect(&myEngine, SIGNAL(getRpm(double)), &myClass, SLOT(rpmUpdateSlot(double)));
     QObject::connect(&myEngine, SIGNAL(getPressure(double)), &myClass, SLOT(pressureUpdateSlot(double)));
 
-
     return app.exec();
 }
