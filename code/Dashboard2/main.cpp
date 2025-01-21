@@ -37,6 +37,12 @@ int main(int argc, char *argv[])
     QObject::connect(engine.rootObjects().at(0)->findChild<QObject*>("mySlider"), SIGNAL(qmlSignal(int)),
                      &myClass, SLOT(cppSlot(int)));
 
+    QObject::connect(engine.rootObjects().at(0)->findChild<QObject*>("mySlider"), SIGNAL(qmlSignal(int)),
+                     &myEngine, SLOT(adjustPressure(int)));
+
+    QObject::connect(engine.rootObjects().at(0)->findChild<QObject*>("mySlider2"), SIGNAL(rmpSignal(int)),
+                     &myEngine, SLOT(adjustRpm(int)));
+
     QObject::connect(engine.rootObjects().at(0)->findChild<QObject*>("myButton"), SIGNAL(qmlPressed()),
                      &myClass, SLOT(buttonPressed()));
 

@@ -45,6 +45,28 @@
                         "access": "public",
                         "name": "tickEngine",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "adjustPressure",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "adjustRpm",
+                        "returnType": "void"
                     }
                 ],
                 "superClasses": [

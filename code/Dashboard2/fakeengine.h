@@ -50,6 +50,8 @@ public:
 
 public slots:
     void tickEngine();
+    void adjustPressure(int value);
+    void adjustRpm(int value);
 
 signals:
     void getRpm(double rpm);

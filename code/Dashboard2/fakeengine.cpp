@@ -71,7 +71,11 @@ int findClosestIndex(const std::vector<double>& vec, double target) {
     return closestIndex;
 }
 
+double mapRange(double x, double min, double max, double outMin, double outMax) {
 
+
+    return ((x - min) / (max - min)) * (outMax - outMin) + outMin;
+}
 
 //returns the current VE
 double fakeEngine::getCurrentVE(double rpm, double pressureBar)
@@ -140,7 +144,17 @@ void fakeEngine::tickEngine()
 
 }
 
-void fakeEngine::adjustPressure(double value)
+void fakeEngine::adjustPressure(int value)
 {
+    //std::cout << static_cast<int>(mapRange(value,0,100,0,14)) << '\n';
+    currentManifoldPressure = pressureMapBar[static_cast<int>(mapRange(value,0,100,0,14))];
+   // std::cout << "Current mani pressure: " << currentManifoldPressure << '\n';
+}
 
+void fakeEngine::adjustRpm(int value)
+{
+    std::cout << value << std::endl;
+    //std::cout << static_cast<int>(mapRange(value,0,100,0,19)) << '\n';
+    currentRPM = rpmMap[static_cast<int>(mapRange(value,0,100,0,19))];
+    //std::cout << "Current rpm: " << currentRPM << '\n';
 }

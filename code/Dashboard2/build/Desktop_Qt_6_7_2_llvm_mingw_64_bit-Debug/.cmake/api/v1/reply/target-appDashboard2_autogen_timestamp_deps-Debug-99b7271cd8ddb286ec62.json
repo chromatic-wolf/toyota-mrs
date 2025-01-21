@@ -18,11 +18,11 @@
 	[
 		{
 			"backtrace" : 0,
-			"id" : "appDashboard2_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appDashboard2_tooling::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
-			"id" : "appDashboard2_tooling::@6890427a1f51a3e7e1df"
+			"id" : "appDashboard2_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 

@@ -162,20 +162,35 @@ Window{
 
         }
 
+
+
+
         Slider {
             id: slider
             objectName: "mySlider"
             from: 0
             to: 100
-            value: 50
+            value: 0
             anchors.bottom: label.bottom
             anchors.bottomMargin: -72
             anchors.horizontalCenter: label.horizontalCenter
              signal qmlSignal(msg: int)
             onMoved: slider.qmlSignal(slider.value)
-
         }
 
+        Slider {
+            id: slider2
+            objectName: "mySlider2"
+            from: 0
+            to: 100
+            value: 0
+            anchors.bottom: slider.bottom
+            anchors.bottomMargin: -72
+            anchors.horizontalCenter: label.horizontalCenter
+             signal rmpSignal(msg: int)
+            onMoved: slider2.rmpSignal(slider2.value)
+
+        }
 
 
 

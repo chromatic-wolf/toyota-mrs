@@ -18,7 +18,7 @@ MyClass::MyClass(QQmlApplicationEngine &engine)
 
 void MyClass::cppSlot(const int &msg)
 {
-    qDebug() << "Called the C++ slot with message:" << msg;
+    //qDebug() << "Called the C++ slot with message:" << msg;
 
     QObject *item = eng->rootObjects().at(0)->findChild<QObject*>("myCar");
     item->setProperty("width", msg + 400);

@@ -29,12 +29,12 @@
 			"set_property",
 			"_qt_internal_find_third_party_dependencies",
 			"add_dependencies",
+			"qt6_target_qml_sources",
 			"_qt_internal_scan_qml_imports",
 			"_qt_internal_generate_deploy_qml_imports_script",
 			"cmake_language",
 			"_qt_internal_finalize_executable",
 			"qt6_finalize_target",
-			"qt6_target_qml_sources",
 			"target_include_directories",
 			"_qt_internal_qml_type_registration",
 			"target_sources",
@@ -489,48 +489,7 @@
 				"parent" : 74
 			},
 			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
-			},
-			{
-				"command" : 20,
-				"file" : 27,
-				"line" : 1,
-				"parent" : 76
-			},
-			{
-				"command" : 19,
-				"file" : 0,
-				"line" : 774,
-				"parent" : 77
-			},
-			{
-				"command" : 18,
-				"file" : 0,
-				"line" : 678,
-				"parent" : 78
-			},
-			{
-				"command" : 17,
-				"file" : 0,
-				"line" : 678,
-				"parent" : 79
-			},
-			{
 				"command" : 16,
-				"file" : 5,
-				"line" : 3545,
-				"parent" : 80
-			},
-			{
-				"command" : 15,
-				"file" : 5,
-				"line" : 3350,
-				"parent" : 81
-			},
-			{
-				"command" : 21,
 				"file" : 5,
 				"line" : 647,
 				"parent" : 15
@@ -539,6 +498,47 @@
 				"command" : 15,
 				"file" : 5,
 				"line" : 2751,
+				"parent" : 76
+			},
+			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 21,
+				"file" : 27,
+				"line" : 1,
+				"parent" : 78
+			},
+			{
+				"command" : 20,
+				"file" : 0,
+				"line" : 774,
+				"parent" : 79
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 678,
+				"parent" : 80
+			},
+			{
+				"command" : 18,
+				"file" : 0,
+				"line" : 678,
+				"parent" : 81
+			},
+			{
+				"command" : 17,
+				"file" : 5,
+				"line" : 3545,
+				"parent" : 82
+			},
+			{
+				"command" : 15,
+				"file" : 5,
+				"line" : 3350,
 				"parent" : 83
 			},
 			{
@@ -617,13 +617,13 @@
 				"command" : 24,
 				"file" : 5,
 				"line" : 2535,
-				"parent" : 83
+				"parent" : 76
 			},
 			{
 				"command" : 30,
 				"file" : 5,
 				"line" : 2639,
-				"parent" : 83
+				"parent" : 76
 			},
 			{
 				"command" : 24,
@@ -635,13 +635,13 @@
 				"command" : 24,
 				"file" : 5,
 				"line" : 2687,
-				"parent" : 83
+				"parent" : 76
 			},
 			{
 				"command" : 29,
 				"file" : 5,
 				"line" : 2770,
-				"parent" : 83
+				"parent" : 76
 			},
 			{
 				"command" : 28,
@@ -665,7 +665,7 @@
 				"command" : 31,
 				"file" : 0,
 				"line" : 768,
-				"parent" : 77
+				"parent" : 79
 			},
 			{
 				"command" : 24,
@@ -1070,15 +1070,15 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 82,
-			"id" : "appDashboard2_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appDashboard2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 84,
+			"backtrace" : 77,
 			"id" : "appDashboard2_tooling::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appDashboard2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 84,
+			"id" : "appDashboard2_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,

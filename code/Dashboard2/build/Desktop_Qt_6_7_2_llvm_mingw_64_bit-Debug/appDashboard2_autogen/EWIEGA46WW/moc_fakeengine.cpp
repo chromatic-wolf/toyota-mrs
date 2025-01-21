@@ -43,7 +43,10 @@ constexpr auto qt_meta_stringdata_CLASSfakeEngineENDCLASS = QtMocHelpers::string
     "pressure",
     "getCurrentVe",
     "VE",
-    "tickEngine"
+    "tickEngine",
+    "adjustPressure",
+    "value",
+    "adjustRpm"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -56,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSfakeEngineENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,12 +67,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSfakeEngineENDCLASS[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    2, 0x06,    1 /* Public */,
-       4,    1,   41,    2, 0x06,    3 /* Public */,
-       6,    1,   44,    2, 0x06,    5 /* Public */,
+       1,    1,   50,    2, 0x06,    1 /* Public */,
+       4,    1,   53,    2, 0x06,    3 /* Public */,
+       6,    1,   56,    2, 0x06,    5 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       8,    0,   47,    2, 0x0a,    7 /* Public */,
+       8,    0,   59,    2, 0x0a,    7 /* Public */,
+       9,    1,   60,    2, 0x0a,    8 /* Public */,
+      11,    1,   63,    2, 0x0a,   10 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Double,    3,
@@ -78,6 +83,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSfakeEngineENDCLASS[] = {
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   10,
+    QMetaType::Void, QMetaType::Int,   10,
 
        0        // eod
 };
@@ -101,7 +108,13 @@ Q_CONSTINIT const QMetaObject fakeEngine::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
         // method 'tickEngine'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'adjustPressure'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'adjustRpm'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
     nullptr
 } };
@@ -116,6 +129,8 @@ void fakeEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->getPressure((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 2: _t->getCurrentVe((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 3: _t->tickEngine(); break;
+        case 4: _t->adjustPressure((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->adjustRpm((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -163,13 +178,13 @@ int fakeEngine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }
