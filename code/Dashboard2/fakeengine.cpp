@@ -55,20 +55,20 @@ double generateRandomValue() {
 }
 
 //function to find the closest value in a array
-int find_closest(const std::vector<double>& A, const double a)
-{
-    if(A.size() <=0)
-        throw std::invalid_argument("empty array");
+int findClosestIndex(const std::vector<double>& vec, double target) {
+    int closestIndex = 0;
+    int minDifference = std::abs(vec[0] - target); // Start with the first element
 
-    const auto lb = std::lower_bound(A.begin(), A.end(), a);
-    int ans = lb!= A.end() ? *lb : A.back();
-    if (lb != A.begin()) {
-        auto prec = lb - 1;
-        if (abs(ans - a) > abs(*prec - a))
-            ans = *prec;
+    // Iterate through the vector to find the closest value
+    for (int i = 1; i < vec.size(); i++) {
+        int diff = std::abs(vec[i] - target); // Calculate absolute difference from target
+        if (diff < minDifference) {
+            minDifference = diff;
+            closestIndex = i;
+        }
     }
 
-    return ans;
+    return closestIndex;
 }
 
 
@@ -76,8 +76,10 @@ int find_closest(const std::vector<double>& A, const double a)
 //returns the current VE
 double fakeEngine::getCurrentVE(double rpm, double pressureBar)
 {
-    int currentPosRpm = find_closest(rpmMap, rpm);
-    int currentPosPressure = find_closest(pressureMapBar, pressureBar);
+    int currentPosRpm = findClosestIndex(rpmMap, rpm);
+    int currentPosPressure = findClosestIndex(pressureMapBar, pressureBar);
+    std::cout << "CurrentRPMPOS: " << currentPosRpm << std::endl;
+    std::cout << "CurrentPressurePos: " << currentPosPressure << std::endl;
     return veTable[currentPosPressure][currentPosRpm];
 }
 
@@ -133,7 +135,7 @@ void fakeEngine::tickEngine()
     emit getRpm(currentRPM);
     emit getCurrentVe(currentVE);
 
-    std::cout << "Engine RPM: " << currentRPM << std::endl;
-    std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
+    //std::cout << "Engine RPM: " << currentRPM << std::endl;
+    //std::cout << "Engine Pressure: " << currentManifoldPressure << std::endl;
 
 }

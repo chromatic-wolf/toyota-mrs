@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
             &myEngine, SLOT(tickEngine()));
 
 
-    timer->start(50);
+    timer->start(1000);
 
 
     MyClass myClass(engine);
